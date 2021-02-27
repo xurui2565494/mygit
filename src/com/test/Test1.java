@@ -11,7 +11,7 @@ public class Test1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		//多个参无返回
 		NoReturnMultiParam noReturnMultiParam = (int a, int b) -> {
 			
 			System.out.println("两数求和："+(a+b));
@@ -20,6 +20,7 @@ public class Test1 {
 		
 		noReturnMultiParam.method(1, 3);
 		
+		//一参无返回
 		NoReturnOneParam noReturnOneParam = (int a) -> {
 			
 			System.out.println("NoReturnOneParam:" + a);
@@ -28,7 +29,7 @@ public class Test1 {
 		
 		noReturnOneParam.method(6);
 		
-		
+		//无参无返回
 		NoReturnNoParam noReturnNoParam = () -> {
 			
 			System.out.println("NoReturnNoParam");
@@ -37,6 +38,7 @@ public class Test1 {
 		
 		noReturnNoParam.method();
 		
+		//多参有返回
 		ReturnMultiParam returnMultiParam = (int a, int b) -> {
 			
 			return a + b;
@@ -46,6 +48,7 @@ public class Test1 {
 		System.out.println("ReturnMultiParam:"+returnMultiParam.method(2, 3));
 		
 		
+		//一参有返回
 		ReturnOneParam returnOneParam = (int a) -> {
 			
 			return a;
@@ -54,6 +57,8 @@ public class Test1 {
 		
 		System.out.println("ReturnOneParam:"+returnOneParam.method(8));
 		
+		
+		//无参有返回
 		ReturnNoParam returnNoParam = () ->{
 			
 			return 1;
