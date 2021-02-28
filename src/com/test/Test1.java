@@ -20,7 +20,7 @@ public class Test1 {
 		
 		noReturnMultiParam.method(1, 3);
 		
-		//一参无返回
+		//一个参无返回
 		NoReturnOneParam noReturnOneParam = (int a) -> {
 			
 			System.out.println("NoReturnOneParam:" + a);
@@ -38,7 +38,7 @@ public class Test1 {
 		
 		noReturnNoParam.method();
 		
-		//多参有返回
+		//多个参有返回
 		ReturnMultiParam returnMultiParam = (int a, int b) -> {
 			
 			return a + b;
@@ -48,7 +48,7 @@ public class Test1 {
 		System.out.println("ReturnMultiParam:"+returnMultiParam.method(2, 3));
 		
 		
-		//一参有返回
+		//一个参有返回
 		ReturnOneParam returnOneParam = (int a) -> {
 			
 			return a;
