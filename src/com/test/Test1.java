@@ -12,6 +12,7 @@ public class Test1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		//多参无返回
 		NoReturnMultiParam noReturnMultiParam = (int a, int b) -> {
 			
 			System.out.println("两数求和："+(a+b));
