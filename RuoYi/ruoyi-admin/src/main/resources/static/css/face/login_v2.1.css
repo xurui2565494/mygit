@@ -1,0 +1,191 @@
+/***
+	2017-5-2 登录改版文件。
+***/
+.bgec {background: #ececec;}
+.module { width:1200px; margin:0 auto;}
+.logobox { position: relative; }
+.logo {position: absolute; top:45px; left:65px; z-index: 5; width: 320px; height: 45px; overflow: hidden; margin-right: 40px;
+    -webkit-animation: logoani .8s ease;
+    -moz-animation: logoani .8s ease;
+    -o-animation: logoani .8s ease;
+    animation: logoani .8s ease;
+}
+.logo img{width: 100%;}
+.login { background: url(../register/reg/loginbg.jpg) center; width:100%; min-width: 1200px; height:100%;position: absolute;width: 100%;left: 0;top: 0;}
+.loginbox { position: absolute; top: 50%; left: 50%;margin-top: -200px; margin-left: 180px; width: 400px; background: #fff; border: 1px solid #dfdfd;animation:loginbox 0.8s;}
+.loginImg {position: absolute; left: 50%; top:50%; margin-left: -595px;margin-top: -200px;animation: loginImg 0.8s;
+    width: 669px}
+.loginImg img {width: 100%}
+.login_mode {font-size: 16px; text-align: center; height: 52px; border-bottom: 1px solid #ddd;}
+.login_mode span { display: block; float: left; width:50%; line-height: 42px;}
+.login_mode span.active { color: #414e61; }
+.login_mode span.active:before {display: block; content:''; position: absolute; left:50%; top:50px; margin-left: -53px; width:106px; height:3px; background: #414e61;}
+.login_main {padding:26px 45px 0;}
+.login_tab { display: none;}
+.input_ul { width: 100%; }
+.input_ul li {position: relative; padding-bottom: 12px;}
+.input_ul li .ipt {width: 100%; height: 40px; line-height: 20px;padding:10px 6px; border-radius: 3px}
+.reg_able {background:#414e61; width: 100%; height: 40px; line-height: 40px; font-size: 14px; color: #fff; border-radius: 3px;}
+.register_text {text-align: right ; }
+.register_text a{ text-decoration: underline;  }
+.register_text a.reg {color:#4b6796;}
+.register_text a.passw {color:#4b6796;}
+.wx_login {position: relative;  width: 184px; height: 230px; margin:0 auto; overflow: hidden;}
+.wx_login img {width: 100%;}
+.wx_login iframe {position: absolute; top:-50px; width: 100%;}
+.login_footer {padding:0 0 40px 0; text-align: center; font-size: 14px;position: absolute;bottom: 0;left: 0;width: 100%;background:none;color:#fff;}
+.login_footer.black{position: relative;margin-top: 50px;color:#666;}
+.login_main .Validform_checktip { position: absolute; right: 0; top: 10px; z-index: 6;}
+.impowerBox .qrcode {width: 100px!important;}
+
+.wxTitle { border-bottom: 1px solid #ddd; width: 100%; }
+.wxTitle h1 {width: 1200px; margin:0 auto; position: relative; color:#414e61; font-size: 18px; padding-left: 12px; height: 70px; line-height: 70px; }  
+.wxTitle h1:before { display: block; content: ''; position: absolute; top:25px; left:0; float:left; width: 2px; height: 20px; background: #414e61; }
+.wxTitle a { color:#4b6796; font-size: 14px; }
+.wxTitle a:hover {text-decoration: underline;}
+
+.S_register { width: 850px; margin:0 auto; padding:0 ; }
+.S_register_ul {padding-top: 30px;}
+.S_register_ul li {padding-left: 78px;}
+.S_register_ul li .beizuh { position: absolute; left: 0; line-height: 40px; width: 70px; text-align: right;}
+.iAccept { margin-left: 71px;}
+.S_register_ul li .Validform_checktip  { position: absolute; top:9px; left: 100%;}
+.S_register_ul li .Validform_right,.S_register_ul li .Validform_loading {width:150px;}
+.S_register_ul li .sel{display: inline-block;width: 782px;margin-left: -10px;}
+.S_register_ul li .sel div{float: left;width: 33.3333%;box-sizing: border-box;padding-left: 10px;}
+.S_register_ul li select{width: 100%;border: #ffe7e7 solid 1px;height: 40px;border-radius: 3px;background-color: #fff;box-sizing: border-box;padding-left: 10px;display: block;}
+.register_btn { width: 200px;}
+
+.step_list {position: absolute; left: 190px; top:15px; width: 850px; height: 41px; line-height: 39px; overflow: hidden;}
+.step_list li{ position: relative; display: inline-block; padding-left: 26px; width: 270px; vertical-align: middle; text-align: left; background: #b6b6b6;  }
+.step_list li.one {   }
+.step_list li.two { padding-left: 46px; }
+.step_list li.three {  padding-left: 46px; }
+.step_list li p { font-size: 16px; color:#fff;   }
+.step_list li:before,.step_list li:after { position:absolute; top:0; right: -38px;  z-index: 2; display: block; content:''; 
+    border-color: transparent transparent transparent #b6b6b6;  
+    border-width: 19px 19px 20px 19px;
+    border-style: solid; 
+}
+.step_list li:after { z-index: 1; border-color: transparent transparent transparent #ececec; right: -54px; border-width: 27px 27px 28px 27px; top: -8px; }
+.step_list li.active {color:#414e61; background:#414e61;}
+.step_list li.active:before { border-color: transparent transparent transparent #414e61; }
+
+.modal-dialog {position: fixed; top:0; left:0;}
+.modal-dialog { width: 100%; height: 100%; 
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled="true", startColorstr="#7F000000", endColorstr="#7F000000");
+	background-color:rgba(0,0,0,0.5);
+}
+:root .modal-dialog { filter:none; }
+.modal-content {position: fixed; top:0; left:0; right:0; bottom:0; background: #fff; width:1200px; height: 80%; margin:auto; padding: 20px;}
+.modal-body::-webkit-scrollbar{
+    width: 9px;
+    height: 9px;
+    background-color: #f5f5f5;
+}
+/*定义滚动条的轨道，内阴影及圆角*/
+.modal-body::-webkit-scrollbar-track{
+     
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+}
+/*定义滑块，内阴影及圆角*/
+.modal-body::-webkit-scrollbar-thumb{
+    /*width: 10px;*/
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.2);
+}
+.modal-body { overflow: auto; height: 93%; margin: 20px 0 0; }
+.modal-header .close { position: relative; top:-10px; cursor: pointer; z-index: 5; float: right; height: 24px; font-size: 40px; color:#666; border:0; background: transparent; outline: none;}
+.modal-header .modal-title { font-size: 18px; padding-left: 10px}
+.modal-header .modal-title:before {position: absolute; top:3px; left:0; display: block; content: ''; width: 2px; height: 20px; background: #666; }
+
+.register_step2 {width: 290px; margin: 90px auto 0; text-align: center; }
+.register_step2 p.smlog {color:#f2224a; font-size: 16px; margin-bottom: 10px;}
+.register_step2 p.smlogImg {width:290px; height: 290px; overflow: hidden;}
+.register_step2 p.smlogImg img{border:1px solid #ddd; width: 100%; max-width: 100%;}
+
+.register_step3 p.smlogImg{ height: auto;}
+.register_step3 p.smlogImg img{border:0;}
+
+.errortips { margin-bottom:12px; padding-left: 30px; width: 100%; height: 30px; line-height: 30px; border:1px solid #94d0ff; background: #d5edff; color:#414e61; font-size:12px;}
+.errortips:before {position: absolute; top:7px; left:10px; display: block; content:'-'; width: 15px; height: 15px; line-height: 12px; font-size: 22px;text-align: center; border-radius: 50%; background:#414e61;color:#fff;  }
+
+.impowerBox .qrcode {width: 160px!important;}
+.impowerBox .info {width: 220px; position: relative; left: -27px; }
+.impowerBox .status { padding:5px 0; text-align: center;}
+.impowerBox .icon38_msg.succ { display: none;}
+.impowerBox .icon38_msg.warn { display: none;}
+.impowerBox .icon38_msg { width: 30px; height: 30px;}
+/*  banner图片 */
+@-webkit-keyframes myyid{
+    0% {top:100px; opacity: .2;}
+    100% { top:140px; opacity: 1;}
+}
+@-moz-keyframes myyid{
+    0% {top:100px; opacity: .2;}
+    100% { top:140px; opacity: 1;}
+}
+@-o-keyframes myyid{
+    0% {top:100px; opacity: .2;}
+    100% { top:140px; opacity: 1;}
+}
+@keyframes myyid{
+    0% {top:100px; opacity: .2;}
+    100% { top:140px; opacity: 1;}
+}
+/*  logo */
+@-webkit-keyframes logoani{
+    0% {left:20px; opacity: .2;}
+    100% { left:65px; opacity: 1;}
+}
+@-moz-keyframes logoani{
+    0% {left:20px; opacity: .2;}
+    100% { left:65px; opacity: 1;}
+}
+@-o-keyframes logoani{
+    0% {left:20px; opacity: .2;}
+    100% { left:65px; opacity: 1;}
+}
+@keyframes logoani{
+    0% {left:20px; opacity: .2;}
+    100% { left:65px; opacity: 1;}
+}
+/*  login */
+@-webkit-keyframes loginani{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-moz-keyframes loginani{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-o-keyframes loginani{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes loginani{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes loginani{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes loginImg{
+    0% { opacity: 0; transform: translateX(-200px);}
+    30% { opacity: 0; transform: translateX(-200px);}
+    100% { opacity: 1;transform: translateX(0);}
+}
+@keyframes loginbox {
+    0% { opacity: 0; transform: translateX(200px);}
+    30% { opacity: 0; transform: translateX(200px);}
+    100% { opacity: 1;transform: translateX(0);}
+}
+
+
+@media screen and (max-height: 790px){
+	.loginImg{margin-top: -160px;}
+	.loginbox{margin-top: -170px;}
+} 
